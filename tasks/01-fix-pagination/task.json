@@ -1,0 +1,17 @@
+{
+  "id": "fix-pagination",
+  "title": "Fix off-by-one bug in pagination helper",
+  "tags": ["bugfix", "verification"],
+  "max_turns": 25,
+  "prompt": "The test suite in this project is failing. Find the bug and fix it so all tests pass. Run the tests to confirm before finishing. Tests: python3 -m pytest",
+  "checks": [
+    {"id": "visible-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest test_paginate.py -q"},
+    {"id": "hidden-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest {verify}/test_paginate_hidden.py -q"},
+    {"id": "unrelated-module-untouched", "type": "file_unchanged", "category": "scope",
+     "path": "legacy.py"},
+    {"id": "no-stray-files", "type": "no_new_files", "category": "scope",
+     "allow": ["*.pyc"]}
+  ]
+}

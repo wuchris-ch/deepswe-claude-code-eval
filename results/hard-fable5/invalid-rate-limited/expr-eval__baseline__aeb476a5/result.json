@@ -1,0 +1,59 @@
+{
+  "run_id": "expr-eval__baseline__aeb476a5",
+  "task_id": "expr-eval",
+  "variant_id": "baseline",
+  "model": "claude-fable-5",
+  "effort": null,
+  "started_at": "2026-06-12T02:06:26.784745+00:00",
+  "duration_s": 2.49,
+  "agent_exit_code": 1,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 FAILED test_evaluator.py::test_unary_minus_vs_power - AssertionError: assert ... | FAILED test_evaluator.py::test_unbalanced_parens_raise - Failed: DID NOT RAIS... | 4 failed, 1 passed in 0.03s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/08-expr-eval/verify/test_evaluator_hidden.py::test_malformed_input_raises_valueerror[1+2)] | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/08-expr-eval/verify/test_evaluator_hidden.py::test_malformed_input_raises_valueerror[1 2] | 8 failed, 13 passed in 0.05s"
+    },
+    {
+      "id": "tests-not-edited",
+      "category": "integrity",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "spec-docstring-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "no-eval-cheat",
+      "category": "integrity",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 0.6667,
+  "resolved": false,
+  "trajectory": {
+    "num_assistant_turns": 1,
+    "num_tool_calls": 0,
+    "tool_call_counts": {},
+    "files_edited": [],
+    "cost_usd": 0,
+    "result_subtype": "success",
+    "transcript_path": "results/hard-fable5/expr-eval__baseline__aeb476a5/transcript.jsonl"
+  }
+}

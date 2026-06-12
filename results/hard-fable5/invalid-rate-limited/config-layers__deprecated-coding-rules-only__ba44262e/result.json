@@ -1,0 +1,65 @@
+{
+  "run_id": "config-layers__deprecated-coding-rules-only__ba44262e",
+  "task_id": "config-layers",
+  "variant_id": "deprecated-coding-rules-only",
+  "model": "claude-fable-5",
+  "effort": null,
+  "started_at": "2026-06-12T02:06:39.702937+00:00",
+  "duration_s": 2.45,
+  "agent_exit_code": 1,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 FAILED test_config.py::test_merge_does_not_mutate_inputs - AssertionError: as... | FAILED test_config.py::test_loader_later_layers_win - AssertionError: assert ... | 3 failed, 2 passed in 0.03s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/09-config-layers/verify/test_config_hidden.py::test_loader_merges_then_expands | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/09-config-layers/verify/test_config_hidden.py::test_loader_three_layer_precedence | 9 failed, 5 passed in 0.05s"
+    },
+    {
+      "id": "tests-not-edited",
+      "category": "integrity",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "merge-spec-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "expand-spec-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "loader-spec-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 0.7143,
+  "resolved": false,
+  "trajectory": {
+    "num_assistant_turns": 1,
+    "num_tool_calls": 0,
+    "tool_call_counts": {},
+    "files_edited": [],
+    "cost_usd": 0,
+    "result_subtype": "success",
+    "transcript_path": "results/hard-fable5/config-layers__deprecated-coding-rules-only__ba44262e/transcript.jsonl"
+  }
+}

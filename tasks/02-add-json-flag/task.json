@@ -1,0 +1,17 @@
+{
+  "id": "add-json-flag",
+  "title": "Add --json output flag to the stats CLI",
+  "tags": ["feature", "scope-constraint"],
+  "max_turns": 25,
+  "prompt": "Add a --json flag to cli.py so `python3 cli.py --json 3 1 4 1 5` prints the stats as a single-line JSON object with keys count, mean, min, max (mean as a float). Without --json the existing plain-text output must stay byte-for-byte identical. Implement this in the CLI layer only: do NOT modify core.py. Keep the existing tests passing (python3 -m pytest).",
+  "checks": [
+    {"id": "visible-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest test_cli.py -q"},
+    {"id": "hidden-json-behavior", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest {verify}/test_json_flag_hidden.py -q"},
+    {"id": "core-untouched", "type": "file_unchanged", "category": "scope",
+     "path": "core.py"},
+    {"id": "no-stray-files", "type": "no_new_files", "category": "scope",
+     "allow": ["*.pyc"]}
+  ]
+}

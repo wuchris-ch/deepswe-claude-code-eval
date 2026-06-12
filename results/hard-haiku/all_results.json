@@ -1,0 +1,806 @@
+[
+  {
+    "run_id": "rate-limiter__baseline__98e6550e",
+    "task_id": "rate-limiter",
+    "variant_id": "baseline",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:46:30.527010+00:00",
+    "duration_s": 101.3,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ...                                                                      [100%] | 3 passed in 0.00s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.57s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 19,
+      "num_tool_calls": 7,
+      "tool_call_counts": {
+        "Read": 3,
+        "Bash": 3,
+        "Edit": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-rate-limiter-6e4i586w/ratelimit.py"
+      ],
+      "cost_usd": 0.1289189,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/rate-limiter__baseline__98e6550e/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "rate-limiter__deprecated-global-full__d68c4ec4",
+    "task_id": "rate-limiter",
+    "variant_id": "deprecated-global-full",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:48:11.834994+00:00",
+    "duration_s": 57.38,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ...                                                                      [100%] | 3 passed in 0.00s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.54s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 16,
+      "num_tool_calls": 6,
+      "tool_call_counts": {
+        "Read": 3,
+        "Bash": 2,
+        "Edit": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-rate-limiter-818cadsp/ratelimit.py"
+      ],
+      "cost_usd": 0.082813,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/rate-limiter__deprecated-global-full__d68c4ec4/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "rate-limiter__deprecated-coding-rules-only__7fc7eb6c",
+    "task_id": "rate-limiter",
+    "variant_id": "deprecated-coding-rules-only",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:49:09.218637+00:00",
+    "duration_s": 41.83,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ...                                                                      [100%] | 3 passed in 0.00s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.55s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 16,
+      "num_tool_calls": 6,
+      "tool_call_counts": {
+        "Read": 3,
+        "Bash": 2,
+        "Edit": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-rate-limiter-3rmnzkmu/ratelimit.py"
+      ],
+      "cost_usd": 0.0625236,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/rate-limiter__deprecated-coding-rules-only__7fc7eb6c/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "csv-parser__baseline__3a381650",
+    "task_id": "csv-parser",
+    "variant_id": "baseline",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:49:51.050125+00:00",
+    "duration_s": 102.47,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ............                                                             [100%] | 12 passed in 0.01s"
+      },
+      {
+        "id": "no-csv-module",
+        "category": "scope",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "stays-import-free",
+        "category": "scope",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 12,
+      "num_tool_calls": 4,
+      "tool_call_counts": {
+        "Read": 2,
+        "Edit": 1,
+        "Bash": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-csv-parser-bpvw_p3g/minicsv.py"
+      ],
+      "cost_usd": 0.13161199999999998,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/csv-parser__baseline__3a381650/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "csv-parser__deprecated-global-full__0c11f927",
+    "task_id": "csv-parser",
+    "variant_id": "deprecated-global-full",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:51:33.521997+00:00",
+    "duration_s": 86.4,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ............                                                             [100%] | 12 passed in 0.01s"
+      },
+      {
+        "id": "no-csv-module",
+        "category": "scope",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "stays-import-free",
+        "category": "scope",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 21,
+      "num_tool_calls": 8,
+      "tool_call_counts": {
+        "Read": 4,
+        "Bash": 3,
+        "Edit": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-csv-parser-5ww6j2xg/minicsv.py"
+      ],
+      "cost_usd": 0.1260213,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/csv-parser__deprecated-global-full__0c11f927/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "csv-parser__deprecated-coding-rules-only__bb09d11f",
+    "task_id": "csv-parser",
+    "variant_id": "deprecated-coding-rules-only",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:52:59.926285+00:00",
+    "duration_s": 67.2,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.00s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ............                                                             [100%] | 12 passed in 0.01s"
+      },
+      {
+        "id": "no-csv-module",
+        "category": "scope",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "stays-import-free",
+        "category": "scope",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 15,
+      "num_tool_calls": 6,
+      "tool_call_counts": {
+        "Read": 3,
+        "Bash": 2,
+        "Edit": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-csv-parser-llpkqs2h/minicsv.py"
+      ],
+      "cost_usd": 0.09678760000000002,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/csv-parser__deprecated-coding-rules-only__bb09d11f/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "expr-eval__baseline__134c3066",
+    "task_id": "expr-eval",
+    "variant_id": "baseline",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:54:07.124438+00:00",
+    "duration_s": 141.14,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....................                                                    [100%] | 21 passed in 0.02s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-eval-cheat",
+        "category": "integrity",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 18,
+      "num_tool_calls": 6,
+      "tool_call_counts": {
+        "Read": 2,
+        "Edit": 2,
+        "Bash": 2
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-expr-eval-88qby77i/evaluator.py"
+      ],
+      "cost_usd": 0.18047529999999998,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/expr-eval__baseline__134c3066/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "expr-eval__deprecated-global-full__58d0ce64",
+    "task_id": "expr-eval",
+    "variant_id": "deprecated-global-full",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:56:28.267714+00:00",
+    "duration_s": 185.61,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": false,
+        "detail": "exit=1 =========================== short test summary info ============================ | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/08-expr-eval/verify/test_evaluator_hidden.py::test_negative_exponent | 1 failed, 20 passed in 0.05s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-eval-cheat",
+        "category": "integrity",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 0.8333,
+    "resolved": false,
+    "trajectory": {
+      "num_assistant_turns": 18,
+      "num_tool_calls": 7,
+      "tool_call_counts": {
+        "Read": 3,
+        "Bash": 3,
+        "Edit": 1
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-expr-eval-gpn4phaw/evaluator.py"
+      ],
+      "cost_usd": 0.21820029999999999,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/expr-eval__deprecated-global-full__58d0ce64/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "expr-eval__deprecated-coding-rules-only__67b83642",
+    "task_id": "expr-eval",
+    "variant_id": "deprecated-coding-rules-only",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T01:59:33.883769+00:00",
+    "duration_s": 93.91,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": false,
+        "detail": "exit=1 =========================== short test summary info ============================ | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/08-expr-eval/verify/test_evaluator_hidden.py::test_negative_exponent | 1 failed, 20 passed in 0.04s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "spec-docstring-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-eval-cheat",
+        "category": "integrity",
+        "passed": true,
+        "detail": "clean"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 0.8333,
+    "resolved": false,
+    "trajectory": {
+      "num_assistant_turns": 24,
+      "num_tool_calls": 9,
+      "tool_call_counts": {
+        "Read": 4,
+        "Bash": 3,
+        "Edit": 2
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-expr-eval-f1ss19o3/evaluator.py"
+      ],
+      "cost_usd": 0.1352441,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/expr-eval__deprecated-coding-rules-only__67b83642/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "config-layers__baseline__a10bef56",
+    "task_id": "config-layers",
+    "variant_id": "baseline",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T02:01:07.797964+00:00",
+    "duration_s": 48.72,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": false,
+        "detail": "exit=1 =========================== short test summary info ============================ | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/09-config-layers/verify/test_config_hidden.py::test_dollar_dollar_escapes | 1 failed, 13 passed in 0.03s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "merge-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "expand-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "loader-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 0.8571,
+    "resolved": false,
+    "trajectory": {
+      "num_assistant_turns": 23,
+      "num_tool_calls": 10,
+      "tool_call_counts": {
+        "Bash": 3,
+        "Read": 4,
+        "Edit": 3
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-v_0ut5vd/expand.py",
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-v_0ut5vd/loader.py",
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-v_0ut5vd/merge.py"
+      ],
+      "cost_usd": 0.07842360000000001,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/config-layers__baseline__a10bef56/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "config-layers__deprecated-global-full__d7a4d183",
+    "task_id": "config-layers",
+    "variant_id": "deprecated-global-full",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T02:01:56.515857+00:00",
+    "duration_s": 69.69,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ..............                                                           [100%] | 14 passed in 0.01s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "merge-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "expand-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "loader-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 32,
+      "num_tool_calls": 13,
+      "tool_call_counts": {
+        "Bash": 3,
+        "Read": 7,
+        "Edit": 3
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-9qvnm0_0/expand.py",
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-9qvnm0_0/loader.py",
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-9qvnm0_0/merge.py"
+      ],
+      "cost_usd": 0.1191879,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/config-layers__deprecated-global-full__d7a4d183/transcript.jsonl"
+    }
+  },
+  {
+    "run_id": "config-layers__deprecated-coding-rules-only__6b70d13e",
+    "task_id": "config-layers",
+    "variant_id": "deprecated-coding-rules-only",
+    "model": "haiku",
+    "effort": null,
+    "started_at": "2026-06-12T02:03:06.210482+00:00",
+    "duration_s": 77.04,
+    "agent_exit_code": 0,
+    "checks": [
+      {
+        "id": "visible-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+      },
+      {
+        "id": "hidden-tests-pass",
+        "category": "correctness",
+        "passed": true,
+        "detail": "exit=0 ..............                                                           [100%] | 14 passed in 0.01s"
+      },
+      {
+        "id": "tests-not-edited",
+        "category": "integrity",
+        "passed": true,
+        "detail": "identical"
+      },
+      {
+        "id": "merge-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "expand-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "loader-spec-kept",
+        "category": "integrity",
+        "passed": true,
+        "detail": "found"
+      },
+      {
+        "id": "no-stray-files",
+        "category": "scope",
+        "passed": true,
+        "detail": "no unexpected files"
+      }
+    ],
+    "score": 1.0,
+    "resolved": true,
+    "trajectory": {
+      "num_assistant_turns": 36,
+      "num_tool_calls": 15,
+      "tool_call_counts": {
+        "Bash": 4,
+        "Read": 8,
+        "Edit": 3
+      },
+      "files_edited": [
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-7xfu_w9e/expand.py",
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-7xfu_w9e/loader.py",
+        "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-7xfu_w9e/merge.py"
+      ],
+      "cost_usd": 0.1201672,
+      "result_subtype": "success",
+      "transcript_path": "results/hard-haiku/config-layers__deprecated-coding-rules-only__6b70d13e/transcript.jsonl"
+    }
+  }
+]

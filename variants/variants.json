@@ -1,0 +1,17 @@
+[
+  {
+    "id": "baseline",
+    "file": null,
+    "notes": "No extra instructions. Claude Code's stock system prompt only."
+  },
+  {
+    "id": "deprecated-global-full",
+    "file": "deprecated-global-full.md",
+    "notes": "Chris's full deprecated global CLAUDE.md (87 lines): attribution bans, formatting rules, epistemic-care/verification rules, plus the CODING behavioral section. Source: ~/.claude/backups/global-claude-md-disabled-20260609-222158.md"
+  },
+  {
+    "id": "deprecated-coding-rules-only",
+    "file": "deprecated-coding-rules-only.md",
+    "notes": "Ablation: only the CODING behavioral section (think-before-coding, simplicity-first, surgical-changes, goal-driven-execution) without the surrounding epistemic/formatting rules."
+  }
+]

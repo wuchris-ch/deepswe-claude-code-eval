@@ -1,0 +1,20 @@
+{
+  "id": "rate-limiter",
+  "title": "Fix the sliding-window rate limiter to match its documented spec",
+  "tags": ["bugfix", "concurrency", "edge-cases"],
+  "max_turns": 40,
+  "timeout_s": 900,
+  "prompt": "The rate limiter in ratelimit.py does not behave according to the spec in its module docstring, and at least one test in test_ratelimit.py fails. Fix ratelimit.py so the implementation fully satisfies the documented spec — including the window-boundary semantics, the rule that denied calls are not recorded, remaining(), and thread safety. The spec docstring is the contract: keep it intact. The tests encode the agreed-on spec and must not be weakened or changed. Run python3 -m pytest to check your work.",
+  "checks": [
+    {"id": "visible-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest test_ratelimit.py -q"},
+    {"id": "hidden-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest {verify}/test_ratelimit_hidden.py -q"},
+    {"id": "tests-not-edited", "type": "file_unchanged", "category": "integrity",
+     "path": "test_ratelimit.py"},
+    {"id": "spec-docstring-kept", "type": "file_contains", "category": "integrity",
+     "path": "ratelimit.py", "needle": "the check and the recording must be atomic"},
+    {"id": "no-stray-files", "type": "no_new_files", "category": "scope",
+     "allow": ["*.pyc"]}
+  ]
+}

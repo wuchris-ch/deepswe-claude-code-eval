@@ -1,0 +1,66 @@
+{
+  "run_id": "rename-across-modules__baseline__babc587e",
+  "task_id": "rename-across-modules",
+  "variant_id": "baseline",
+  "model": "haiku",
+  "started_at": "2026-06-12T01:15:08.843454+00:00",
+  "duration_s": 34.87,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ...                                                                      [100%] | 3 passed in 0.00s"
+    },
+    {
+      "id": "hidden-new-name-works",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ....                                                                     [100%] | 4 passed in 0.01s"
+    },
+    {
+      "id": "old-name-gone-store",
+      "category": "correctness",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "id": "old-name-gone-api",
+      "category": "correctness",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "id": "old-name-gone-report",
+      "category": "correctness",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 1.0,
+  "resolved": true,
+  "trajectory": {
+    "num_assistant_turns": 24,
+    "num_tool_calls": 12,
+    "tool_call_counts": {
+      "Bash": 4,
+      "Read": 3,
+      "Edit": 5
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-rename-across-modules-0hoea15l/api.py",
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-rename-across-modules-0hoea15l/report.py",
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-rename-across-modules-0hoea15l/store.py"
+    ],
+    "cost_usd": 0.05984410000000001,
+    "result_subtype": "success",
+    "transcript_path": "results/sample-haiku/rename-across-modules__baseline__babc587e/transcript.jsonl"
+  }
+}

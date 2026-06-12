@@ -1,0 +1,52 @@
+{
+  "run_id": "merge-intervals__baseline__a611a64f",
+  "task_id": "merge-intervals",
+  "variant_id": "baseline",
+  "model": "haiku",
+  "started_at": "2026-06-12T01:13:40.777082+00:00",
+  "duration_s": 25.22,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+    },
+    {
+      "id": "tests-not-edited",
+      "category": "integrity",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 1.0,
+  "resolved": true,
+  "trajectory": {
+    "num_assistant_turns": 13,
+    "num_tool_calls": 6,
+    "tool_call_counts": {
+      "Bash": 3,
+      "Read": 2,
+      "Edit": 1
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-merge-intervals-7wbnuii2/intervals.py"
+    ],
+    "cost_usd": 0.043942100000000005,
+    "result_subtype": "success",
+    "transcript_path": "results/sample-haiku/merge-intervals__baseline__a611a64f/transcript.jsonl"
+  }
+}

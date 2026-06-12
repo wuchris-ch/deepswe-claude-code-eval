@@ -1,0 +1,52 @@
+{
+  "run_id": "add-json-flag__baseline__de2facce",
+  "task_id": "add-json-flag",
+  "variant_id": "baseline",
+  "model": "haiku",
+  "started_at": "2026-06-12T01:11:32.068196+00:00",
+  "duration_s": 39.02,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ..                                                                       [100%] | 2 passed in 0.12s"
+    },
+    {
+      "id": "hidden-json-behavior",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ...                                                                      [100%] | 3 passed in 0.20s"
+    },
+    {
+      "id": "core-untouched",
+      "category": "scope",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 1.0,
+  "resolved": true,
+  "trajectory": {
+    "num_assistant_turns": 22,
+    "num_tool_calls": 9,
+    "tool_call_counts": {
+      "Read": 4,
+      "Bash": 4,
+      "Edit": 1
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-add-json-flag-8e3x_w3s/cli.py"
+    ],
+    "cost_usd": 0.06093030000000001,
+    "result_subtype": "success",
+    "transcript_path": "results/sample-haiku/add-json-flag__baseline__de2facce/transcript.jsonl"
+  }
+}

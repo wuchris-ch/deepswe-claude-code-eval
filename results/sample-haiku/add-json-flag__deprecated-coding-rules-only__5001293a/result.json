@@ -1,0 +1,52 @@
+{
+  "run_id": "add-json-flag__deprecated-coding-rules-only__5001293a",
+  "task_id": "add-json-flag",
+  "variant_id": "deprecated-coding-rules-only",
+  "model": "haiku",
+  "started_at": "2026-06-12T01:13:01.996166+00:00",
+  "duration_s": 38.78,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ..                                                                       [100%] | 2 passed in 0.12s"
+    },
+    {
+      "id": "hidden-json-behavior",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ...                                                                      [100%] | 3 passed in 0.18s"
+    },
+    {
+      "id": "core-untouched",
+      "category": "scope",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 1.0,
+  "resolved": true,
+  "trajectory": {
+    "num_assistant_turns": 20,
+    "num_tool_calls": 8,
+    "tool_call_counts": {
+      "Bash": 4,
+      "Read": 3,
+      "Edit": 1
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-add-json-flag-jmswnpqh/cli.py"
+    ],
+    "cost_usd": 0.0592311,
+    "result_subtype": "success",
+    "transcript_path": "results/sample-haiku/add-json-flag__deprecated-coding-rules-only__5001293a/transcript.jsonl"
+  }
+}

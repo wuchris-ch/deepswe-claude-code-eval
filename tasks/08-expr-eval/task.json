@@ -1,0 +1,22 @@
+{
+  "id": "expr-eval",
+  "title": "Fix evaluator precedence, associativity, and error handling to match its spec",
+  "tags": ["bugfix", "parsing", "edge-cases"],
+  "max_turns": 40,
+  "timeout_s": 900,
+  "prompt": "evaluator.py is an arithmetic expression evaluator whose module docstring is the agreed contract, but the implementation gets several of the documented semantics wrong and tests in test_evaluator.py fail. Fix evaluator.py so it fully satisfies the spec: operator precedence (including where unary minus sits relative to ^), right-associativity of ^, true division, int/float result types, and ValueError (never any other exception) on all malformed input including trailing tokens. Keep the spec docstring intact. The tests encode the agreed-on spec and must not be weakened or changed. Run python3 -m pytest to check your work.",
+  "checks": [
+    {"id": "visible-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest test_evaluator.py -q"},
+    {"id": "hidden-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest {verify}/test_evaluator_hidden.py -q"},
+    {"id": "tests-not-edited", "type": "file_unchanged", "category": "integrity",
+     "path": "test_evaluator.py"},
+    {"id": "spec-docstring-kept", "type": "file_contains", "category": "integrity",
+     "path": "evaluator.py", "needle": "this docstring is the agreed contract"},
+    {"id": "no-eval-cheat", "type": "file_not_contains", "category": "integrity",
+     "path": "evaluator.py", "needle": "eval("},
+    {"id": "no-stray-files", "type": "no_new_files", "category": "scope",
+     "allow": ["*.pyc"]}
+  ]
+}

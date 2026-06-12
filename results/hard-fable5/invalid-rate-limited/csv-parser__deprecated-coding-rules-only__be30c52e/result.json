@@ -1,0 +1,65 @@
+{
+  "run_id": "csv-parser__deprecated-coding-rules-only__be30c52e",
+  "task_id": "csv-parser",
+  "variant_id": "deprecated-coding-rules-only",
+  "model": "claude-fable-5",
+  "effort": null,
+  "started_at": "2026-06-12T02:06:24.503944+00:00",
+  "duration_s": 2.28,
+  "agent_exit_code": 1,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 FAILED test_minicsv.py::test_quoted_field_with_embedded_newline - AssertionEr... | FAILED test_minicsv.py::test_unterminated_quote_raises - Failed: DID NOT RAIS... | 3 failed, 2 passed in 0.03s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/07-csv-parser/verify/test_minicsv_hidden.py::test_unterminated_quote_spanning_lines_raises | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/07-csv-parser/verify/test_minicsv_hidden.py::test_multiline_quoted_then_more_rows | 8 failed, 4 passed in 0.04s"
+    },
+    {
+      "id": "no-csv-module",
+      "category": "scope",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "id": "stays-import-free",
+      "category": "scope",
+      "passed": true,
+      "detail": "clean"
+    },
+    {
+      "id": "tests-not-edited",
+      "category": "integrity",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "spec-docstring-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 0.7143,
+  "resolved": false,
+  "trajectory": {
+    "num_assistant_turns": 1,
+    "num_tool_calls": 0,
+    "tool_call_counts": {},
+    "files_edited": [],
+    "cost_usd": 0,
+    "result_subtype": "success",
+    "transcript_path": "results/hard-fable5/csv-parser__deprecated-coding-rules-only__be30c52e/transcript.jsonl"
+  }
+}

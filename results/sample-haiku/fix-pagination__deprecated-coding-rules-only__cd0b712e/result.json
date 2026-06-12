@@ -1,0 +1,52 @@
+{
+  "run_id": "fix-pagination__deprecated-coding-rules-only__cd0b712e",
+  "task_id": "fix-pagination",
+  "variant_id": "deprecated-coding-rules-only",
+  "model": "haiku",
+  "started_at": "2026-06-12T01:11:02.324500+00:00",
+  "duration_s": 29.74,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 ......                                                                   [100%] | 6 passed in 0.01s"
+    },
+    {
+      "id": "unrelated-module-untouched",
+      "category": "scope",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 1.0,
+  "resolved": true,
+  "trajectory": {
+    "num_assistant_turns": 18,
+    "num_tool_calls": 7,
+    "tool_call_counts": {
+      "Bash": 4,
+      "Read": 2,
+      "Edit": 1
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-fix-pagination-3gfo229t/paginate.py"
+    ],
+    "cost_usd": 0.0515081,
+    "result_subtype": "success",
+    "transcript_path": "results/sample-haiku/fix-pagination__deprecated-coding-rules-only__cd0b712e/transcript.jsonl"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "run_id": "merge-intervals__deprecated-global-full__e176fd92",
+  "task_id": "merge-intervals",
+  "variant_id": "deprecated-global-full",
+  "model": "haiku",
+  "started_at": "2026-06-12T01:14:06.000956+00:00",
+  "duration_s": 32.82,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.03s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+    },
+    {
+      "id": "tests-not-edited",
+      "category": "integrity",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 1.0,
+  "resolved": true,
+  "trajectory": {
+    "num_assistant_turns": 18,
+    "num_tool_calls": 7,
+    "tool_call_counts": {
+      "Bash": 3,
+      "Read": 3,
+      "Edit": 1
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-merge-intervals-zqmvglx2/intervals.py"
+    ],
+    "cost_usd": 0.05726840000000001,
+    "result_subtype": "success",
+    "transcript_path": "results/sample-haiku/merge-intervals__deprecated-global-full__e176fd92/transcript.jsonl"
+  }
+}

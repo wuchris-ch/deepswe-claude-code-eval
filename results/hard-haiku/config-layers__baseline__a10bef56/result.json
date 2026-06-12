@@ -1,0 +1,73 @@
+{
+  "run_id": "config-layers__baseline__a10bef56",
+  "task_id": "config-layers",
+  "variant_id": "baseline",
+  "model": "haiku",
+  "effort": null,
+  "started_at": "2026-06-12T02:01:07.797964+00:00",
+  "duration_s": 48.72,
+  "agent_exit_code": 0,
+  "checks": [
+    {
+      "id": "visible-tests-pass",
+      "category": "correctness",
+      "passed": true,
+      "detail": "exit=0 .....                                                                    [100%] | 5 passed in 0.01s"
+    },
+    {
+      "id": "hidden-tests-pass",
+      "category": "correctness",
+      "passed": false,
+      "detail": "exit=1 =========================== short test summary info ============================ | FAILED ../../../../../../../Users/chris/Projects/deepswe-claude-code-eval/tasks/09-config-layers/verify/test_config_hidden.py::test_dollar_dollar_escapes | 1 failed, 13 passed in 0.03s"
+    },
+    {
+      "id": "tests-not-edited",
+      "category": "integrity",
+      "passed": true,
+      "detail": "identical"
+    },
+    {
+      "id": "merge-spec-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "expand-spec-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "loader-spec-kept",
+      "category": "integrity",
+      "passed": true,
+      "detail": "found"
+    },
+    {
+      "id": "no-stray-files",
+      "category": "scope",
+      "passed": true,
+      "detail": "no unexpected files"
+    }
+  ],
+  "score": 0.8571,
+  "resolved": false,
+  "trajectory": {
+    "num_assistant_turns": 23,
+    "num_tool_calls": 10,
+    "tool_call_counts": {
+      "Bash": 3,
+      "Read": 4,
+      "Edit": 3
+    },
+    "files_edited": [
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-v_0ut5vd/expand.py",
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-v_0ut5vd/loader.py",
+      "/private/var/folders/55/pc3d3g7s5w3g6ttqwcjxslnm0000gn/T/eval-config-layers-v_0ut5vd/merge.py"
+    ],
+    "cost_usd": 0.07842360000000001,
+    "result_subtype": "success",
+    "transcript_path": "results/hard-haiku/config-layers__baseline__a10bef56/transcript.jsonl"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "config-layers",
+  "title": "Fix the layered config system (merge, expand, loader) to match its specs",
+  "tags": ["bugfix", "multi-file", "edge-cases", "long-horizon"],
+  "max_turns": 50,
+  "timeout_s": 900,
+  "prompt": "This layered configuration system has three modules — merge.py, expand.py, loader.py — each with a module docstring that is the agreed contract. The implementations diverge from their specs in several interacting ways, and tests in test_config.py fail. Fix all three modules so every documented behavior holds: deep-merge semantics (None deletion marker, list replacement, no mutation at any depth), expansion semantics (defaults with colons, the $$ escape, recursive expansion through dicts AND lists, new containers), and loader semantics (later layers win, merge fully before expanding). Keep the spec docstrings intact. The tests encode the agreed-on spec and must not be weakened or changed. Run python3 -m pytest to check your work.",
+  "checks": [
+    {"id": "visible-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest test_config.py -q"},
+    {"id": "hidden-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest {verify}/test_config_hidden.py -q"},
+    {"id": "tests-not-edited", "type": "file_unchanged", "category": "integrity",
+     "path": "test_config.py"},
+    {"id": "merge-spec-kept", "type": "file_contains", "category": "integrity",
+     "path": "merge.py", "needle": "this docstring is the agreed contract"},
+    {"id": "expand-spec-kept", "type": "file_contains", "category": "integrity",
+     "path": "expand.py", "needle": "this docstring is the agreed contract"},
+    {"id": "loader-spec-kept", "type": "file_contains", "category": "integrity",
+     "path": "loader.py", "needle": "this docstring is the agreed contract"},
+    {"id": "no-stray-files", "type": "no_new_files", "category": "scope",
+     "allow": ["*.pyc"]}
+  ]
+}

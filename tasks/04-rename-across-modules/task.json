@@ -1,0 +1,21 @@
+{
+  "id": "rename-across-modules",
+  "title": "Rename fetch_records to load_records across the package",
+  "tags": ["refactor", "multi-file"],
+  "max_turns": 30,
+  "prompt": "Rename the function fetch_records to load_records everywhere in this project (definition, imports, call sites, docstrings). No deprecation alias: the old name must be gone completely. All tests must pass afterwards (python3 -m pytest).",
+  "checks": [
+    {"id": "visible-tests-pass", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest test_store.py -q"},
+    {"id": "hidden-new-name-works", "type": "command", "category": "correctness",
+     "command": "python3 -m pytest {verify}/test_rename_hidden.py -q"},
+    {"id": "old-name-gone-store", "type": "file_not_contains", "category": "correctness",
+     "path": "store.py", "needle": "fetch_records"},
+    {"id": "old-name-gone-api", "type": "file_not_contains", "category": "correctness",
+     "path": "api.py", "needle": "fetch_records"},
+    {"id": "old-name-gone-report", "type": "file_not_contains", "category": "correctness",
+     "path": "report.py", "needle": "fetch_records"},
+    {"id": "no-stray-files", "type": "no_new_files", "category": "scope",
+     "allow": ["*.pyc"]}
+  ]
+}
