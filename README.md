@@ -5,7 +5,7 @@ using **Claude Code in headless mode** as the agent under test. Each run drops
 the agent into a sandboxed copy of a task workspace, injects a configurable
 **instruction variant** via `--append-system-prompt`, captures the full
 **trajectory** (stream-json transcript), then scores the final workspace against
-**hidden verification checks** the agent never sees — correctness, scope
+**hidden verification checks** the agent never sees: correctness, scope
 discipline, and test integrity.
 
 The evaluation matrix spans **tasks × instruction variants × models × effort
@@ -25,13 +25,13 @@ per model, 2026-06-11):
 
 - **The suite discriminates by capability.** Haiku reliably drops documented
   edge cases (negative-exponent semantics, escape-sequence handling) that
-  frontier models catch — every miss traced to a specific spec line in the
+  frontier models catch. Every miss traced to a specific spec line in the
   per-run failed-check details, so the signal is real, not harness noise.
-- **Opus 4.8 swept the suite with ~40% fewer turns than Haiku** — more capable
+- **Opus 4.8 swept the suite with ~40% fewer turns than Haiku**: more capable
   *and* more efficient at the trajectory level.
 - **Prompt-rule A/B finding:** an 87-line production system prompt added ~11%
   more turns and ~17% more cost over baseline for identical outcomes on the
-  core suite — its behavioral rules were already the model's default behavior.
+  core suite; its behavioral rules were already the model's default behavior.
   That measurement is the evidence that retired the prompt.
 - Agent runs that die on API errors (e.g. session rate limits) are detected
   from the transcript's `api_error_status` and excluded from aggregates, so
@@ -39,7 +39,7 @@ per model, 2026-06-11):
 
 ## How a run works
 
-1. `tasks/<task>/workspace/` is copied to a throwaway temp dir — the agent
+1. `tasks/<task>/workspace/` is copied to a throwaway temp dir; the agent
    never sees `task.json`, the checks, or the hidden `verify/` tests.
 2. `claude -p "<task prompt>" --append-system-prompt "<variant>"
    --output-format stream-json --max-turns N` runs with the sandbox as cwd;
@@ -87,7 +87,7 @@ changed agent behavior:
 
 | Variant | Source |
 |---|---|
-| `baseline` | none — stock Claude Code system prompt |
+| `baseline` | none (stock Claude Code system prompt) |
 | `deprecated-global-full` | a full 87-line production global CLAUDE.md (attribution/formatting rules, epistemic-care rules, CODING behavioral section) |
 | `deprecated-coding-rules-only` | ablation: just the CODING section (think-before-coding, simplicity-first, surgical-changes, goal-driven-execution) |
 
@@ -99,7 +99,7 @@ Core-suite numbers (15 runs, 5 tasks × 3 variants, `claude-haiku-4-5`):
 | deprecated-coding-rules-only | 100% | 16.4 | 0.2452 |
 | deprecated-global-full | 100% | 18.6 | 0.3277 |
 
-Identical outcomes at +11% turns / +17% cost for the full prompt — a clean,
+Identical outcomes at +11% turns / +17% cost for the full prompt: a clean,
 quantified case for prompt simplification, with the per-trajectory analysis in
 the [sample trajectory review](review/reviews/2026-06-11-merge-intervals-deprecated-global-full.md).
 
@@ -152,7 +152,7 @@ for real runs; `--dry-run` works without it.
 - **Scoring goes beyond pass/fail:** R2E-Gym scores only *did the tests pass*;
   this harness additionally scores **scope discipline** (untouched-file and
   no-stray-file checks) and **test integrity** (did the agent weaken the tests
-  instead of fixing the bug) — exactly the dimensions an instruction-variant
+  instead of fixing the bug), exactly the dimensions an instruction-variant
   experiment needs.
 - **Every result row is schema-validated** (`harness/schema.py`) and every
   claim in this README is backed by raw per-run JSON + transcripts in
